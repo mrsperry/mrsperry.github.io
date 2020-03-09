@@ -1,0 +1,107 @@
+/* Mixins */
+/* Variables */
+/* Fonts */
+@font-face {
+  font-family: "Klein";
+  src: url("../../fonts/klein-regular.ttf");
+}
+:root {
+  font-family: "Klein", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #DDDDDD;
+}
+
+/* Containers */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #1c2d40;
+  background-image: radial-gradient(circle at center, #1c2d40, #0c121d);
+  min-height: 100vh;
+  margin: 0rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section a {
+  -webkit-transition: border-color 250ms linear;
+  -moz-transition: border-color 250ms linear;
+  -o-transition: border-color 250ms linear;
+  transition: border-color 250ms linear;
+  color: #DDDDDD;
+  padding: 1rem 3rem;
+  border: 2px solid #DDDDDD;
+  margin: 2rem;
+}
+section a:hover, section a:active {
+  -webkit-transition: border-color 250ms linear;
+  -moz-transition: border-color 250ms linear;
+  -o-transition: border-color 250ms linear;
+  transition: border-color 250ms linear;
+  border-color: #5af2a6;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer a {
+  padding: 0rem 1.5rem;
+}
+footer a + a {
+  border-left: 1px solid #DDDDDD;
+}
+
+/* Elements */
+figure {
+  margin: 0.5rem;
+}
+figure img, figure img:active {
+  border-radius: 50%;
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+span {
+  color: #5af2a6;
+}
+
+h1, h2 {
+  font-weight: normal;
+  margin: 0.5rem 0rem;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+a {
+  -webkit-transition: color 250ms linear;
+  -moz-transition: color 250ms linear;
+  -o-transition: color 250ms linear;
+  transition: color 250ms linear;
+  color: #5aa6f2;
+  text-decoration: none;
+}
+a:hover, a:active {
+  -webkit-transition: color 250ms linear;
+  -moz-transition: color 250ms linear;
+  -o-transition: color 250ms linear;
+  transition: color 250ms linear;
+  color: #5af2a6;
+}
+
+/*# sourceMappingURL=main.css.map */

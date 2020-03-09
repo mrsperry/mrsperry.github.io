@@ -1,0 +1,92 @@
+@use "global";
+@use "base";
+
+/* Fonts */
+@font-face {
+    font-family: "Klein";
+    src: url("../../fonts/klein-regular.ttf")
+}
+
+:root {
+    font-family: "Klein", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: base.$text-color;
+}
+
+/* Containers */
+body {
+    @include global.flex(column);
+    background-color: base.$gradient-light;
+    background-image: radial-gradient(circle at center, base.$gradient-light, base.$gradient-dark);
+    min-height: 100vh;
+    margin: 0rem;
+}
+
+section {
+    @include global.flex(column);
+
+    a {
+        @include global.transition(border-color, 250ms, linear);
+        color: base.$text-color;
+        padding: 1rem 3rem;
+        border: 2px solid base.$text-color;
+        margin: 2rem;
+
+        &:hover, &:active {
+            @include global.transition(border-color, 250ms, linear);
+            border-color: base.$text-highlight-color;
+        }
+    }
+}
+
+footer {
+    @include global.flex();
+
+    a {
+        padding: 0rem 1.5rem;
+
+        + a {
+            border-left: 1px solid base.$text-color;
+        }
+    }
+}
+
+/* Elements */
+figure {
+    margin: 0.5rem;
+
+    img, img:active {
+        border-radius: 50%;
+        max-width: 20rem;
+        max-height: 20rem;
+    }
+}
+
+span {
+    color: base.$text-highlight-color;
+}
+
+h1, h2 {
+    font-weight: normal;
+    margin: 0.5rem 0rem;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+a {
+    @include global.transition(color, 250ms, linear);
+    color: base.$link-color;
+    text-decoration: none;
+
+    &:hover, &:active {
+        @include global.transition(color, 250ms, linear);
+        color: base.$text-highlight-color;
+    }
+}
