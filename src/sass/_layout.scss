@@ -1,5 +1,5 @@
 @use "global";
-@use "base";
+@use "variables";
 
 /* Fonts */
 @font-face {
@@ -16,11 +16,7 @@
 
 /* Containers */
 body {
-    @include global.flex(column);
-    background-color: base.$gradient-light;
-    background-image: radial-gradient(circle at center, base.$gradient-light, base.$gradient-dark);
     min-height: 100vh;
-    margin: 0rem;
 }
 
 section {
@@ -65,28 +61,4 @@ figure {
 
 span {
     color: base.$text-highlight-color;
-}
-
-h1, h2 {
-    font-weight: normal;
-    margin: 0.5rem 0rem;
-}
-
-h1 {
-    font-size: 2em;
-}
-
-h2 {
-    font-size: 1.5em;
-}
-
-a {
-    @include global.transition(color, 250ms, linear);
-    color: base.$link-color;
-    text-decoration: none;
-
-    &:hover, &:active {
-        @include global.transition(color, 250ms, linear);
-        color: base.$text-highlight-color;
-    }
 }

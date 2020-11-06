@@ -1,3 +1,5 @@
+@use "variables";
+
 /* Mixins */
 @mixin flex($direction: row, $justify: center, $align: center) {
     display: flex;
@@ -11,4 +13,65 @@
     -moz-transition: $property $duration $easing;
     -o-transition: $property $duration $easing;
     transition: $property $duration $easing;
+}
+
+body {
+    @include flex(column);
+    background-color: variables.$gradient-light;
+    background-image: radial-gradient(circle at center, variables.$gradient-light, variables.$gradient-dark);
+    width: 100%;
+    margin: 0rem;
+}
+
+nav ul, main {
+    max-width: 1024px;
+}
+
+nav {
+    @include flex();
+    background-color: variables.$gradient-light;
+    box-shadow: 0.1rem 0rem 1rem hsla(219, 40%, 10%, 0.5);
+    width: 100%;
+    margin-bottom: 3rem;
+
+    ul {
+        @include flex(row, flex-end);
+        list-style-type: none;
+        width: 100%;
+        padding: 0rem;
+        margin: 1.5rem 2rem;
+
+        li {
+            + li {
+                margin-left: 2rem;
+            }
+
+            a.active {
+                color: variables.$highlight-color;
+            }
+        }
+    }
+}
+
+h1, h2 {
+    font-weight: normal;
+    margin: 0.5rem 0rem;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+a {
+    @include transition(color, 250ms, linear);
+    color: variables.$link-color;
+    text-decoration: none;
+
+    &:hover, &:active {
+        color: variables.$highlight-color;
+    }
 }

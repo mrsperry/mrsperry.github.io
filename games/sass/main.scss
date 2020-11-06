@@ -1,0 +1,87 @@
+@use "../../src/sass/global";
+@use "../../src/sass/variables";
+
+/* Fonts */
+@font-face {
+    font-family: "Klein";
+    src: url("../../fonts/klein-regular.ttf")
+}
+
+:root {
+    font-family: "Klein", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: variables.$text-color;
+}
+
+main {
+    @include global.flex();
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+figure {
+    position: relative;
+    margin: 1rem;
+
+    &:hover, &:active {
+        figcaption {
+            opacity: 1;
+        }
+
+    }
+
+    figcaption {
+        position: absolute;
+        color: white;
+        font-weight: bold;
+        opacity: 0;
+        transition: opacity 250ms ease-in-out;
+        background-color: #000000AA;
+        border-radius: 0rem 0rem 1rem 1rem;
+        bottom: 0rem;
+        left: 0rem;
+        right: 0rem;
+        padding: 2rem;
+
+        span {
+            display: block;
+            font-weight: normal;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+    }
+
+    a img {
+        transition: box-shadow 250ms ease-in-out;
+        box-shadow: 0rem 0rem 1rem #000000CC;
+        border-radius: 1rem;
+        height: 360px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    figure a img {
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 928px) {
+    figure a {
+        figcaption {
+            position: static;
+            opacity: 1;
+            text-align: center;
+            background-color: transparent;
+            padding: 0rem 0rem 0.5rem;
+
+            span {
+                display: none;
+            }
+        }
+
+        img {
+            height: 180px;
+        }
+    }
+}

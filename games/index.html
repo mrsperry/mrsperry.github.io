@@ -7,10 +7,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Joshua Sperry">
         <meta name="description" content="A collection of HTML5 browser games">
-        <meta name="keywords" content="Joshua Sperry, personal projects, games, text adventure, text based, ascii">
         <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <link rel="stylesheet" type="text/css" href="output/main.css">
+        <!-- Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130264842-1"></script>
         <script>
             if (document.location.hostname.search("mrsperry.github.io") !== -1) {
@@ -23,34 +22,39 @@
         </script>
     </head>
     <body>
-        <!-- Navbar -->
-        <nav id="nav" class="flex flex-justify-center">
-            <div id="nav-navbar" class="flex">
-                <a href="../">About Me</a>
-                <a href="../portfolio">Portfolio</a>
-                <a class="nav-active">Games</a>
-                <a href="../visuals">Visuals</a>
-            </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="../">About Me</a>
+                </li>
+                <li>
+                    <a href="../portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a class="active">Games</a>
+                </li>
+                <li>
+                    <a href="../visuals">Visuals</a>
+                </li>
+            </ul>
         </nav>
-        <main id="content" class="flex flex-column flex-align-center">
-            <section>
-                <article>
-                    <header class="game-description flex flex-column">
-                        <h1>Fishing Enterprises
-                            <span>A free to play idle/incremental fishing game</span>
-                        </h1>
-                    </header>
-                    <a href="../fishing-enterprises"><img alt="Fishing Enterprises" src="images/fishing-enterprises.jpg"></a>
-                </article>
-                <article>
-                    <header class="game-description flex flex-column">
-                        <h1>Asteroids
-                            <span>A clone of the classic <a rel="noopener" target="_blank" href="https://en.wikipedia.org/wiki/Asteroids_(video_game)">Asteroids</a> game with my personal spin</span>
-                        </h1>
-                    </header>
-                    <a href="../asteroids"><img alt="Asteroids" src="images/asteroids.jpg"></a>
-                </article>
-            </section>
+        <main>
+            <figure title="Fishing Enterprises">
+                <a href="../fishing-enterprises">
+                    <figcaption>Fishing Enterprises
+                        <span>An idle/incremental fishing business management simulator</span>
+                    </figcaption>
+                    <img alt="Fishing Enterprises" src="images/fishing-enterprises.jpg">
+                </a>
+            </figure>
+            <figure title="Asteroids">
+                <a href="../asteroids">
+                    <figcaption>Asteroids
+                        <span>A remake of the classic Atari game</span>
+                    </figcaption>
+                    <img alt="Asteroids" src="images/asteroids.jpg">
+                </a>
+            </figure>
         </main>
     </body>
 </html>
