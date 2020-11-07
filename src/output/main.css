@@ -1,0 +1,189 @@
+/* Variables */
+/* Mixins */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0rem;
+}
+
+nav ul, main {
+  max-width: 1024px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0.1rem 0rem 1rem rgba(15, 22, 36, 0.5);
+  width: 100%;
+  margin-bottom: 3rem;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  padding: 0rem;
+  margin: 1.5rem 2rem;
+}
+nav ul li + li {
+  margin-left: 2rem;
+}
+
+a {
+  transition: color 250ms ease-in-out;
+  text-decoration: none;
+}
+
+/* Fonts */
+@font-face {
+  font-family: "Klein";
+  src: url("../../fonts/klein-regular.ttf");
+}
+:root {
+  font-family: "Klein", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #222222;
+}
+
+/* Containers */
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+section a {
+  transition: color 250ms ease-in-out, background-color 250ms ease-in-out;
+  color: #222222;
+  padding: 1rem 3rem;
+  border: 2px solid #222222;
+  margin: 2rem;
+}
+section a:hover, section a:active {
+  color: #DDDDDD;
+  background-color: #222222;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+footer a {
+  position: relative;
+  color: #00569c;
+  font-size: 1.15rem;
+  transition: color 250ms ease-in-out;
+  padding: 0rem 0.5rem;
+  border-bottom: 1px solid transparent;
+}
+footer a:hover, footer a:active {
+  color: #0086f3;
+}
+footer a:hover::after, footer a:active::after {
+  width: 100%;
+  left: 0%;
+}
+footer a::after {
+  position: absolute;
+  content: "";
+  transition: width 250ms ease-in-out, left 250ms ease-in-out;
+  background-color: #0086f3;
+  width: 0px;
+  height: 1px;
+  left: 50%;
+  bottom: 0px;
+}
+footer a + a {
+  margin-left: 3rem;
+}
+
+/* Elements */
+figure {
+  margin: 0.5rem;
+}
+figure img, figure img:active {
+  box-shadow: 0rem 0rem 1rem #888888;
+  border-radius: 50%;
+  max-width: 20rem;
+  max-height: 20rem;
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: normal;
+  margin: 0.5rem 0rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+}
+
+@media only screen and (max-width: 2560px) {
+  :root {
+    font-size: 24px;
+  }
+
+  figure img {
+    max-width: 25rem;
+    max-height: 25rem;
+  }
+}
+@media only screen and (max-width: 425px) {
+  :root {
+    font-size: 14px;
+  }
+
+  figure img {
+    max-width: 15rem;
+    max-height: 15rem;
+  }
+
+  h1 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  footer a {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  :root {
+    font-size: 12px;
+  }
+
+  figure img {
+    max-width: 10rem;
+    max-height: 10rem;
+  }
+
+  section a {
+    padding: 0.75rem 2rem;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
