@@ -14,31 +14,45 @@
     color: variables.$text-color;
 }
 
-main {
+h1 {
+    font-size: 1.5rem;
+    border-bottom: 1px solid #CCCCCC;
+    padding-left: 1rem;
+    margin: 0rem 0rem 1rem;
+}
+
+section {
     @include global.flex();
     flex-wrap: wrap;
     width: 100%;
+
+    a {
+        color: variables.$bg-color;
+        box-shadow: 0rem 0rem 2rem #CCCCCC;
+        border-radius: 1rem;
+        margin: 1rem;
+    }
 }
 
 figure {
     position: relative;
-    margin: 1rem;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin: 0rem;
 
     &:hover, &:active {
         figcaption {
-            opacity: 1;
+            transform: translateY(0%);
         }
-
     }
 
     figcaption {
         position: absolute;
-        color: white;
+        color: variables.$bg-color;
         font-weight: bold;
-        opacity: 0;
-        transition: opacity 250ms ease-in-out;
-        background-color: #000000AA;
-        border-radius: 0rem 0rem 1rem 1rem;
+        transition: transform 250ms ease-in-out;
+        background-color: rgba(0, 0, 0, 0.75);
+        transform: translateY(100%);
         bottom: 0rem;
         left: 0rem;
         right: 0rem;
@@ -52,26 +66,63 @@ figure {
         }
     }
 
-    a img {
-        transition: box-shadow 250ms ease-in-out;
-        box-shadow: 0rem 0rem 1rem #000000CC;
-        border-radius: 1rem;
+    img {
+        display: block;
         height: 360px;
     }
 }
 
+@media only screen and (min-width: 2560px) {
+    :root {
+        font-size: 30px;
+    }
+    
+    nav ul, main {
+        max-width: 1500px;
+    }
+
+    figure img {
+        height: 500px;
+    }
+}
+
 @media only screen and (max-width: 1024px) {
-    figure a img {
+    :root {
+        font-size: 14px;
+    }
+
+    nav ul, main {
+        max-width: 900px;
+    }
+
+    figure img {
         height: 300px;
     }
 }
 
 @media only screen and (max-width: 928px) {
-    figure a {
+    :root {
+        font-size: 12px;
+    }
+
+    nav ul, main {
+        max-width: 650px;
+    }
+
+    section a {
+        box-shadow: none;
+    }
+
+    figure {
+        overflow: visible;
+        border-radius: 0rem;
+
         figcaption {
             position: static;
-            opacity: 1;
+            color: variables.$text-color;
+            font-size: 1.2rem;
             text-align: center;
+            transform: none;
             background-color: transparent;
             padding: 0rem 0rem 0.5rem;
 
@@ -81,7 +132,37 @@ figure {
         }
 
         img {
+            box-shadow: 0rem 0rem 1rem #CCCCCC;
+            border-radius: 1rem;
             height: 180px;
         }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    :root {
+        font-size: 10px;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    nav ul, main {
+        max-width: 320px;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    :root {
+        font-size: 8px;
+    }
+
+    nav ul, main {
+        max-width: 250px;
+    }
+
+    figure img {
+        height: 150px;
     }
 }
