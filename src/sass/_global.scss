@@ -10,6 +10,7 @@
 
 body {
     @include flex(column);
+    background-color: variables.$bg-color;
     width: 100%;
     margin: 0rem;
 }
@@ -18,9 +19,44 @@ nav ul, main {
     max-width: 1024px;
 }
 
+a {
+    text-decoration: none;
+    color: variables.$link-color;
+}
+
+a.link {
+    position: relative;
+    transition: color 250ms ease-in-out,
+                border-bottom 250ms ease-in-out;
+    font-size: 1.15rem;
+    padding: 0rem 0.5rem;
+    border-bottom: 1px solid transparent;
+
+    &:hover, &:active, &.active {
+        color: variables.$link-hover-color;
+
+        &::after {
+            width: 100%;
+            left: 0%;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        transition: width 250ms ease-in-out,
+                    left 250ms ease-in-out;
+        background-color: variables.$link-hover-color;
+        width: 0px;
+        height: 1px;
+        left: 50%;
+        bottom: 0px;
+    }
+}
+
 nav {
     @include flex();
-    box-shadow: 0.1rem 0rem 1rem hsla(219, 40%, 10%, 0.5);
+    background-color: variables.$bg-color;
     width: 100%;
     margin-bottom: 3rem;
 
@@ -28,16 +64,25 @@ nav {
         @include flex(row, flex-end);
         list-style-type: none;
         width: 100%;
-        padding: 0rem;
-        margin: 1.5rem 2rem;
+        padding: 0rem 1rem;
+        margin: 1.5rem 1rem;
 
-        li + li {
-            margin-left: 2rem;
+        li {
+            a.link, a.link.active {
+                color: variables.$text-color;
+
+                &:active, &:hover {
+                    color: variables.$text-color;
+                }
+                
+                &::after {
+                    background-color: variables.$text-color;
+                }
+            }
+
+            + li {
+                margin-left: 2rem;
+            }
         }
     }
-}
-
-a {
-    transition: color 250ms ease-in-out;
-    text-decoration: none;
 }
