@@ -3,9 +3,9 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
-  template: __dirname + "/public/index.html",
-  filename: "index.html",
-  inject: "body"
+    template: __dirname + "/public/index.html",
+    filename: "index.html",
+    inject: "body"
 });
 
 module.exports = {
