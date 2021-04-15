@@ -6,7 +6,7 @@ a {
     color: $link-color;
     padding: 0rem 0.5rem;
 
-    &:hover, &:active {
+    &:hover, &:active, &.active {
         @include transition(color);
         color: $link-hover-color;
 
@@ -16,7 +16,7 @@ a {
         }
     }
 
-    &:not(.image-link)::after {
+    &::after {
         @include transition(width, left);
         content: "";
         position: absolute;

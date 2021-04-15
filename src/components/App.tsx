@@ -1,5 +1,6 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
+import Navigation from "./common/Navigation";
 import Profile from "./profile/Profile";
 import Games from "./projects/Games";
 import "../sass/reset.scss";
@@ -26,7 +27,10 @@ class App extends React.PureComponent {
             case "profile":
                 return <Profile/>;
             case "games":
-                return <Games/>;
+                return <>
+                    <Navigation view={view}/>
+                    <Games/>
+                </>;
             default:
                 // Reset the hash if it is invalid
                 window.location.hash = "";
