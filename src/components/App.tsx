@@ -6,6 +6,10 @@ import "../sass/base.scss";
 import "./App.scss";
 
 class App extends React.PureComponent {
+    public static updateHash(hash: string): any {
+        window.location.hash = "#" + hash;
+    }
+
     // Only update the view when the hash changes
     public componentDidMount(): void {
         window.addEventListener("hashchange", () => this.forceUpdate(), false);
