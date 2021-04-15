@@ -16,7 +16,7 @@ a {
         }
     }
 
-    &::after {
+    &:not(.image-link)::after {
         @include transition(width, left);
         content: "";
         position: absolute;

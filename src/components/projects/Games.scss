@@ -1,0 +1,12 @@
+@import "../../sass/mixins";
+
+.games {
+    @include flex();
+    flex-wrap: wrap;
+
+    h1 {
+        font-weight: normal;
+        flex-basis: 100%;
+        border-bottom: 1px solid #CCCCCC;
+    }
+}

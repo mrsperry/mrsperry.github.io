@@ -1,6 +1,7 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
 import Profile from "./profile/Profile";
+import Games from "./projects/Games";
 import "../sass/reset.scss";
 import "../sass/base.scss";
 import "./App.scss";
@@ -24,6 +25,8 @@ class App extends React.PureComponent {
             case "":
             case "profile":
                 return <Profile/>;
+            case "games":
+                return <Games/>;
             default:
                 // Reset the hash if it is invalid
                 window.location.hash = "";
