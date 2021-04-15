@@ -1,0 +1,51 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.project-display {
+    border-radius: 1rem;
+    box-shadow: 0rem 0rem 2rem #CCCCCC;
+    overflow: hidden;
+    padding: 0;
+    margin: 1rem;
+
+    figure {
+        position: relative;
+
+        &:hover, &:active {
+            figcaption {
+                transform: translateY(0%);
+            }
+        }
+
+        img {
+            display: block;
+            border-radius: inherit;
+        }
+
+        figcaption {
+            @include transition(transform);
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.85);
+            transform: translateY(100%);
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem;
+
+            span {
+                display: block;
+                color: $bg-color;
+                background-color: transparent;
+            }
+
+            .title {
+                font-weight: bold;
+            }
+
+            .description {
+                margin-top: 0.5rem;
+                font-size: 0.85rem;
+            }
+        }
+    }
+}
