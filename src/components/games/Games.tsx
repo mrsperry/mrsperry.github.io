@@ -1,5 +1,5 @@
 import * as React from "react";
-import ProjectDisplay from "../projects/ProjectDisplay";
+import ProjectDisplay from "../common/ProjectDisplay";
 import "./Games.scss";
 
 export default class Games extends React.PureComponent {
