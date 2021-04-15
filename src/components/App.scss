@@ -1,3 +1,5 @@
+@import "../sass/variables.scss";
+
 @font-face {
     font-family: "Klein";
     src: url('../assets/fonts/klein-regular.ttf') format("truetype");
@@ -8,8 +10,10 @@
 :root {
     font-family: "Klein";
     font-size: 16px;
+    color: $text-color;
 }
 
 body {
+    background-color: $bg-color;
     margin: 0;
 }
