@@ -1,0 +1,29 @@
+@import "mixins";
+@import "variables";
+
+a {
+    position: relative;
+    color: $link-color;
+    padding: 0rem 0.5rem;
+
+    &:hover, &:active {
+        @include transition(color);
+        color: $link-hover-color;
+
+        &::after {
+            width: 100%;
+            left: 0%;
+        }
+    }
+
+    &::after {
+        @include transition(width, left);
+        content: "";
+        position: absolute;
+        background-color: $link-hover-color;
+        width: 0;
+        height: 1px;
+        left: 50%;
+        bottom: 0;
+    }
+}

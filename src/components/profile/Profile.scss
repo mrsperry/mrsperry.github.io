@@ -1,0 +1,42 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.profile {
+    @include flex(column);
+    width: 100vw;
+    height: 100vh;
+
+    div {
+        @include flex(column);
+    }
+
+    img {
+        border-radius: 50%;
+        box-shadow: 0 0 1rem #AAAAAA;
+    }
+
+    h1 {
+        font-size: 2.25rem;
+        margin: 2rem 0 1rem;
+    }
+
+    button {
+        @include transition(color, background-color);
+        padding: 1rem 4rem;
+        border: 2px solid $text-color;
+        margin: 3rem 0;
+
+        &:hover, &:active {
+            color: $bg-color;
+            background-color: $text-color;
+        }
+    }
+
+    a {
+        font-size: 1.15rem;
+
+        + a {
+            margin-left: 4rem;
+        }
+    }
+}
