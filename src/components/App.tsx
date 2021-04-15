@@ -2,7 +2,7 @@ import * as React from "react";
 import { hot } from "react-hot-loader";
 import Navigation from "./common/Navigation";
 import Profile from "./profile/Profile";
-import Games from "./projects/Games";
+import Games from "./games/Games";
 import "../sass/reset.scss";
 import "../sass/base.scss";
 import "./App.scss";
