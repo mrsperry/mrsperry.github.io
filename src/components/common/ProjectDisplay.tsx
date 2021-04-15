@@ -10,7 +10,7 @@ interface IProject {
 
 export default class ProjectDisplay extends React.PureComponent<IProject> {
     public render(): React.ReactNode {
-        const name = this.props.name.toLowerCase().replace(" ", "-");
+        const name: string = this.props.name.toLowerCase().replace(" ", "-");
         const file: string = this.props.folder + "/" + name + ".jpg";
         const image = require("../../assets/images/" + file);
 

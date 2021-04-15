@@ -2,6 +2,7 @@ import * as React from "react";
 import { hot } from "react-hot-loader";
 import Navigation from "./common/Navigation";
 import Profile from "./profile/Profile";
+import Portfolio from "./portfolio/Portfolio";
 import Games from "./games/Games";
 import "../sass/reset.scss";
 import "../sass/base.scss";
@@ -26,6 +27,11 @@ class App extends React.PureComponent {
             case "":
             case "profile":
                 return <Profile/>;
+            case "portfolio":
+                return <>
+                    <Navigation view={view}/>
+                    <Portfolio/>
+                </>;
             case "games":
                 return <>
                     <Navigation view={view}/>
