@@ -2,11 +2,26 @@
 @import "../../sass/variables";
 
 .project-display {
-    border-radius: 1rem;
-    box-shadow: 0rem 0rem 2rem #CCCCCC;
-    overflow: hidden;
-    padding: 0;
-    margin: 1rem;
+    @include flex();
+    flex-wrap: wrap;
+
+    h1 {
+        flex-basis: 100%;
+        padding: 0 0.5rem;
+        border-bottom: 1px solid #CCCCCC;
+    }
+
+    a {
+        border-radius: 1rem;
+        box-shadow: 0rem 0rem 2rem #CCCCCC;
+        overflow: hidden;
+        padding: 0;
+        margin: 1rem;
+
+        &::after {
+            content: none;
+        }
+    }
 
     figure {
         position: relative;
@@ -30,7 +45,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            padding: 2rem;
+            padding: 1.5rem;
 
             span {
                 display: block;
@@ -44,7 +59,7 @@
 
             .description {
                 margin-top: 0.5rem;
-                font-size: 0.85rem;
+                font-size: 0.8rem;
             }
         }
     }
