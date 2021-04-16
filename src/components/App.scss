@@ -20,6 +20,8 @@ body {
 
 #root {
     @include flex(column, flex-start, center);
+    /* Prevent the scrollbar from shifting content */
+    margin-left: calc(100vw - 100%);
 
     nav, section {
         max-width: 1024px;
