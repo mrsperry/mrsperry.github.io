@@ -10,7 +10,7 @@ export default class Portfolio extends React.Component {
                     title="Personal Projects"
                     data={PortfolioData}
                     assetFolder="portfolio"
-                    urlPrefix="projects"/>
+                    urlPrefix="portfolio/projects"/>
             </section>
         );
     }
