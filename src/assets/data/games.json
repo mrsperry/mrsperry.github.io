@@ -1,17 +1,14 @@
 [
     {
         "name": "Overseer",
-        "description": "An incremental virus scanner experience",
-        "url": "overseer"
+        "description": "An incremental virus scanner experience"
     },
     {
         "name": "Fishing Enterprises",
-        "description": "An idle/incremental fishing business management simulator",
-        "url": "fishing-enterprises"
+        "description": "An idle/incremental fishing business management simulator"
     },
     {
         "name": "Asteroids",
-        "description": "A remake of the classic Atari game",
-        "url": "asteroids"
+        "description": "A remake of the classic Atari game"
     }
 ]
