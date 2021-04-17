@@ -1,30 +1,37 @@
 [
     {
         "name": "CyntraSafe",
-        "description": "A modern cybersecurity business site"
+        "description": "A modern cybersecurity business site",
+        "alt": "A modern cybersecurity business site"
     },
     {
         "name": "Fanlite Engineering",
-        "description": "An architectural design company's site"
+        "description": "An architectural design company's site",
+        "alt": "An architectural design company's site"
     },
     {
         "name": "Iota Online",
-        "description": "A futuristic online game website"
+        "description": "A futuristic online game website",
+        "alt": "A futuristic online game website"
     },
     {
         "name": "LoveLotus",
-        "description": "A simple, modern dating app"
+        "description": "A simple, modern dating app",
+        "alt": "A simple, modern dating app"
     },
     {
         "name": "Opinionated",
-        "description": "A minimal personal blog"
+        "description": "A minimal personal blog",
+        "alt": "A minimal personal blog"
     },
     {
         "name": "SineStats",
-        "description": "A personal server dashboard"
+        "description": "A personal server dashboard",
+        "alt": "A personal server dashboard"
     },
     {
         "name": "sudo news",
-        "description": "A programmer targeted tech blog"
+        "description": "A programmer targeted tech blog",
+        "alt": "A programmer targeted tech blog"
     }
 ]
