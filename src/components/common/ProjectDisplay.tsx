@@ -26,8 +26,12 @@ export default class ProjectDisplay extends React.PureComponent<IProject> {
             const image: string = require("../../assets/images/" + path);
 
             // Create the project url
-            const urlPrefix: string = this.props.urlPrefix ?? "";
-            const url: string = "https://mrsperry.github.io/" + urlPrefix + "/" + id;
+            let urlPrefix: string = this.props.urlPrefix ?? "";
+            if (urlPrefix !== "") {
+                urlPrefix += "/";
+            }
+            
+            const url: string = "https://mrsperry.github.io/" + urlPrefix + id;
 
             // Create the display
             figures.push((
