@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
 import Headshot from "../../assets/images/profile/headshot.jpg";
+import Resume from "../../assets/resume.pdf";
 import "./Profile.scss";
 
 export default class Profile extends React.Component {
@@ -14,7 +15,7 @@ export default class Profile extends React.Component {
                     <Link to="/portfolio" className="portfolio-link">View my portfolio</Link>
                 </div>
                 <footer>
-                    <a target="_blank" href="../../assets/resume.pdf">Resume</a>
+                    <a target="_blank" href={Resume}>Resume</a>
                     <a title="mrjoshuasperry@gmail.com" href="mailto:mrjoshuasperry@gmail.com">Email</a>
                     <a rel="noopener" target="_blank" href="https://github.com/mrsperry">Github</a>
                 </footer>
