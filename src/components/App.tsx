@@ -4,6 +4,7 @@ import Navigation from "./common/Navigation";
 import Profile from "./profile/Profile";
 import Portfolio from "./portfolio/Portfolio";
 import Games from "./games/Games";
+import Visuals from "./visuals/Visuals";
 import "../sass/reset.scss";
 import "../sass/base.scss";
 import "./App.scss";
@@ -36,6 +37,11 @@ class App extends React.PureComponent {
                 return <>
                     <Navigation view={view}/>
                     <Games/>
+                </>;
+            case "visuals":
+                return <>
+                    <Navigation view={view}/>
+                    <Visuals/>
                 </>;
             default:
                 // Reset the hash if it is invalid
