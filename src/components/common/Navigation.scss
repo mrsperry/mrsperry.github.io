@@ -1,0 +1,28 @@
+@import "../../sass/mixins";
+@import "../../sass/variables";
+
+.navigation {
+    width: 100%;
+    margin: 2rem 2rem 4rem;
+
+    ul {
+        @include flex(row, flex-end);
+    }
+
+    li + li {
+        padding-left: 2rem;
+    }
+
+    a {
+        color: $text-color;
+        font-size: 1.15rem;
+
+        &:hover, &:active, &:focus, &.active {
+            color: $text-color;
+        }
+
+        &::after {
+            background-color: $text-color;
+        }
+    }
+}

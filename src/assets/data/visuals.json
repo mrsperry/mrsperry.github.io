@@ -1,0 +1,65 @@
+{
+    "carousel": [
+        "Falling Lights",
+        "Cubic Audio Visualizer",
+        "Random Walkers"
+    ],
+    "projects": [
+        {
+            "name": "Falling Lights",
+            "alt": "Streaks of colored lights falling down"
+        },
+        {
+            "name": "Geometric Constellations",
+            "alt": "Circles floating in space connecting with other nearby circles to create constellations"
+        },
+        {
+            "name": "Rainbow Black Hole",
+            "alt": "A rainbow of colors descending towards the center of a circle"
+        },
+        {
+            "name": "Cubic Audio Visualizer",
+            "alt": "An audio visualizer that uses colored cubes to display the audio level"
+        },
+        {
+            "name": "Falling Text",
+            "alt": "Small sequences of randomly changing letters falling down"
+        },
+        {
+            "name": "Reaching Arms",
+            "alt": "Many arms reaching out from the center giving the illusion of being pulled in"
+        },
+        {
+            "name": "Raindrops",
+            "alt": "Raindrops splashing after falling"
+        },
+        {
+            "name": "Futuristic Audio Visualizer",
+            "alt": "An audio visualizer that uses moving bars and many dots to display the audio level"
+        },
+        {
+            "name": "Rotating Spiral",
+            "alt": "A series of dots, emanating from the center, slowly expanding outwards in a rotating spiral"
+        },
+        {
+            "name": "Random Walkers",
+            "alt": "Multiple colored walkers move out along random paths from the center"
+        },
+        {
+            "name": "Abstract Squares",
+            "alt": "A series of collections of randomly placed colored squares"
+        },
+        {
+            "name": "Bouncing Laser",
+            "alt": "A laser bouncing around randomly hitting nodes"
+        },
+        {
+            "name": "Gradient Circuit",
+            "alt": "A circuit shape generated with a gradient of colors from the center"
+        },
+        {
+            "name": "Meteor Shower",
+            "alt": "Small lines of light coming from the center of the screen to create a meteor shower effect"
+        }
+    ]
+}

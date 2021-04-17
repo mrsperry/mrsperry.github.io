@@ -1,0 +1,29 @@
+@import "../sass/mixins";
+@import "../sass/variables";
+
+@font-face {
+    font-family: "Klein";
+    src: url("../assets/fonts/klein-regular.ttf") format("truetype");
+    font-style: normal;
+}
+
+:root {
+    font-family: "Klein";
+    font-size: 16px;
+    color: $text-color;
+}
+
+body {
+    background-color: $bg-color;
+    margin: 0;
+}
+
+#root {
+    @include flex(column, flex-start, center);
+    /* Prevent the scrollbar from shifting content */
+    margin-left: calc(100vw - 100%);
+
+    nav, section {
+        max-width: 1024px;
+    }
+}

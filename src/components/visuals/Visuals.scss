@@ -1,0 +1,40 @@
+.visuals {
+    /* Override default carousel caption styles */
+    .carousel {
+        margin-bottom: 2rem;
+
+        .slide {
+            display: flex;
+            
+            .legend {
+                font-size: 1rem;
+                color: #FFFFFF;
+                background-color: transparent;
+                opacity: 1;
+                bottom: 1rem;
+            }
+
+            a {
+                padding: 0;
+
+                &::after {
+                    content: none;
+                }
+            }
+        }
+    }
+
+    .project {
+        margin: 0.5rem;
+
+        figcaption {
+            background-color: transparent;
+            padding: 0 0 1rem;
+            
+            .title {
+                text-align: center;
+                font-weight: normal;
+            }
+        }
+    }
+}
