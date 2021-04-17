@@ -3,12 +3,24 @@
     .carousel {
         margin-bottom: 2rem;
 
-        .slide .legend {
-            font-size: 1rem;
-            color: #FFFFFF;
-            background-color: transparent;
-            opacity: 1;
-            bottom: 1rem;
+        .slide {
+            display: flex;
+            
+            .legend {
+                font-size: 1rem;
+                color: #FFFFFF;
+                background-color: transparent;
+                opacity: 1;
+                bottom: 1rem;
+            }
+
+            a {
+                padding: 0;
+
+                &::after {
+                    content: none;
+                }
+            }
         }
     }
 

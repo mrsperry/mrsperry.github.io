@@ -38,11 +38,12 @@ export default class Visuals extends React.PureComponent {
                             }
                         }
 
+                        const id: string = name.toLowerCase().split(" ").join("-");
                         return (
-                            <div key={index}>
+                            <a key={index} tabIndex={-1} title={name} href={"https://mrsperry.github.io/visuals/projects/" + id}>
                                 <img src={src} alt={alt}/>
                                 <p className="legend">{name}</p>
-                            </div>
+                            </a>
                         );
                     })}
                 </Carousel>
