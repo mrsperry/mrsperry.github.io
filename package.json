@@ -11,9 +11,7 @@
         "react": "^16.5.2",
         "react-dom": "^16.5.2",
         "react-hot-loader": "^4.3.11",
-        "react-responsive-carousel": "^3.2.18",
-        "react-slick": "^0.28.1",
-        "slick-carousel": "^1.8.1"
+        "react-responsive-carousel": "^3.2.18"
     },
     "devDependencies": {
         "@babel/cli": "^7.13.14",
