@@ -10,7 +10,6 @@
     "dependencies": {
         "react": "^16.5.2",
         "react-dom": "^16.5.2",
-        "react-hot-loader": "^4.3.11",
         "react-responsive-carousel": "^3.2.18",
         "react-router-dom": "^5.2.0"
     },
@@ -28,6 +27,7 @@
         "eslint-loader": "^4.0.2",
         "html-webpack-plugin": "^5.3.1",
         "node-sass": "^5.0.0",
+        "react-hot-loader": "^4.13.0",
         "sass-loader": "^11.0.1",
         "style-loader": "^0.23.0",
         "ts-loader": "^8.1.0",
