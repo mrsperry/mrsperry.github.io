@@ -4,9 +4,10 @@
 a {
     position: relative;
     color: $link-color;
+    outline: none;
     padding: 0rem 0.5rem;
 
-    &:hover, &:active, &.active {
+    &:hover, &:active, &:focus, &.active {
         @include transition(color);
         color: $link-hover-color;
 

@@ -21,16 +21,16 @@
         &::after {
             content: none;
         }
-    }
 
-    figure {
-        position: relative;
-
-        &:hover, &:active {
+        &:hover, &:active, &:focus {
             figcaption {
                 transform: translateY(0%);
             }
         }
+    }
+
+    figure {
+        position: relative;
 
         img {
             display: block;

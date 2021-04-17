@@ -22,11 +22,12 @@
 
     button {
         @include transition(color, background-color);
+        outline: none;
         padding: 1rem 4rem;
         border: 2px solid $text-color;
         margin: 3rem 0;
 
-        &:hover, &:active {
+        &:hover, &:active, &:focus {
             color: $bg-color;
             background-color: $text-color;
         }
