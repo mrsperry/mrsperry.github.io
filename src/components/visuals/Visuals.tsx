@@ -1,6 +1,7 @@
 import * as React from "react";
 import ProjectDisplay from "../common/ProjectDisplay";
 import VisualData from "../../assets/data/visuals.json";
+import Navigation from "../common/Navigation";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "./Visuals.scss";
@@ -22,7 +23,8 @@ export default class Visuals extends React.PureComponent {
         const carouselData: string[] = VisualData.carousel;
         const projectData: { name: string, alt: string }[] = VisualData.projects;
 
-        return (
+        return <>
+            <Navigation view="visuals"/>
             <section className="visuals">
                 <Carousel {...settings}>
                     {carouselData.map((name: string, index: number) => {
@@ -52,6 +54,6 @@ export default class Visuals extends React.PureComponent {
                     assetFolder="visuals"
                     urlPrefix="visuals/projects"/>
             </section>
-        );
+        </>;
     }
 }

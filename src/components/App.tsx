@@ -1,5 +1,6 @@
 import * as React from "react";
 import { hot } from "react-hot-loader";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Navigation from "./common/Navigation";
 import Profile from "./profile/Profile";
 import Portfolio from "./portfolio/Portfolio";
@@ -24,7 +25,26 @@ class App extends React.PureComponent {
         const hash: string = window.location.hash;
         const view: string = hash.substring(hash.indexOf("#") + 1).toLowerCase();
 
-        switch (view) {
+        return (
+            <HashRouter>
+                <Switch>
+                    <Route path="/portfolio">
+                        <Portfolio/>
+                    </Route>
+                    <Route path="/games">
+                        <Games/>
+                    </Route>
+                    <Route path="/visuals">
+                        <Visuals/>
+                    </Route>
+                    <Route path="/">
+                        <Profile/>
+                    </Route>
+                </Switch>
+            </HashRouter>
+        );
+
+        /*switch (view) {
             case "":
             case "profile":
                 return <Profile/>;
@@ -47,7 +67,7 @@ class App extends React.PureComponent {
                 // Reset the hash if it is invalid
                 window.location.hash = "";
                 return null;
-        }
+        }*/
     }
 }
 

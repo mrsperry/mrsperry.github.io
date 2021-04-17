@@ -20,8 +20,9 @@
         margin: 2rem 0 1rem;
     }
 
-    button {
+    .portfolio-link {
         @include transition(color, background-color);
+        color: $text-color;
         outline: none;
         padding: 1rem 4rem;
         border: 2px solid $text-color;
@@ -30,6 +31,10 @@
         &:hover, &:active, &:focus {
             color: $bg-color;
             background-color: $text-color;
+        }
+
+        &::after {
+            content: none;
         }
     }
 

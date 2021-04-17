@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import "./Navigation.scss";
 
 interface INavigation {
@@ -10,7 +11,7 @@ export default class Navigation extends React.PureComponent<INavigation> {
         // List of all navigation items
         const items: string[] = ["Home", "Portfolio", "Games", "Visuals"];
 
-        const jsx: React.ReactElement[] = [];
+        const navItems: React.ReactElement[] = [];
         for (let index = 0; index < items.length; index++) {
             const item = items[index];
             const id = item.toLowerCase();
@@ -20,16 +21,16 @@ export default class Navigation extends React.PureComponent<INavigation> {
             if (this.props.view === id) {
                 link = <a className="active">{item}</a>;
             } else {
-                link = <a href={"#" + id}>{item}</a>
+                link = <Link to={"/" + id}>{item}</Link>;
             }
 
-            jsx.push(<li key={index}>{link}</li>);
+            navItems.push(<li key={index}>{link}</li>);
         }
 
         return (
             <nav className="navigation">
-                <ul>{jsx}</ul>
+                <ul>{navItems}</ul>
             </nav>
-        );
+        )
     }
 }
