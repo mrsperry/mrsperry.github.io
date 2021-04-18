@@ -1,3 +1,4 @@
+@import "../../sass/animations";
 @import "../../sass/mixins";
 @import "../../sass/variables";
 
@@ -11,6 +12,7 @@
     }
 
     img {
+        @include anim-blow-up(1000ms);
         border-radius: 50%;
         box-shadow: 0 0 1rem #AAAAAA;
     }

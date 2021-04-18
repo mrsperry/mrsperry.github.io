@@ -1,0 +1,12 @@
+@import "variables";
+
+@keyframes blow-up {
+    0% { transform: scale(0); }
+    90% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@mixin anim-blow-up($duration) {
+    animation: blow-up $duration $transition-easing;
+    animation-fill-mode: forwards;
+}
