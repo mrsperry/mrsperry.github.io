@@ -1,4 +1,5 @@
 import * as React from "react";
+import { fadeInElements } from "../utils";
 import "./ProjectDisplay.scss";
 
 interface IProject {
@@ -14,22 +15,7 @@ interface IProject {
 
 export default class ProjectDisplay extends React.PureComponent<IProject> {
     public componentDidMount(): void {
-        const projects: HTMLCollectionOf<Element> = document.getElementsByClassName("project");
-
-        for (let index: number = 0; index < projects.length; index++) {
-            projects.item(index).animate(
-                [
-                    { opacity: 0 },
-                    { opacity: 1 }
-                ],
-                {
-                    delay: index * 100,
-                    duration: 500,
-                    easing: "ease-in-out",
-                    fill: "forwards"
-                }
-            );
-        }
+        fadeInElements(document.getElementsByClassName("project"), 100);
     }
 
     public render(): React.ReactNode {
