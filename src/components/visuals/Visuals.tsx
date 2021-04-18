@@ -2,11 +2,18 @@ import * as React from "react";
 import ProjectDisplay from "../common/ProjectDisplay";
 import VisualData from "../../assets/data/visuals.json";
 import Navigation from "../common/Navigation";
+import { fadeInElements } from "../utils";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import "./Visuals.scss";
 
 export default class Visuals extends React.PureComponent {
+    public componentDidMount(): void {
+        fadeInElements(document.getElementsByClassName("carousel-root"), 100);
+        fadeInElements(document.getElementsByClassName("project"), 100);
+    }
+
+
     public render(): React.ReactNode {
         // Carousel settings
         const settings: {} = {

@@ -1,5 +1,4 @@
 import * as React from "react";
-import { fadeInElements } from "../utils";
 import "./ProjectDisplay.scss";
 
 interface IProject {
@@ -14,10 +13,6 @@ interface IProject {
 }
 
 export default class ProjectDisplay extends React.PureComponent<IProject> {
-    public componentDidMount(): void {
-        fadeInElements(document.getElementsByClassName("project"), 100);
-    }
-
     public render(): React.ReactNode {
         const figures: React.ReactElement[] = [];
 
