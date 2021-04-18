@@ -10,8 +10,6 @@ const HTMLWebpackPluginConfig = new HtmlWebpackPlugin({
 
 module.exports = {
     entry: "./src/components/index.tsx",
-    devtool: "inline-source-map",
-    mode: "development",
     module: {
         rules: [
             {
@@ -37,11 +35,6 @@ module.exports = {
         path: path.resolve(__dirname, "dist/"),
         publicPath: "/",
         filename: "bundle.js"
-    },
-    devServer: {
-        contentBase: path.join(__dirname, "public/"),
-        port: 3000,
-        hotOnly: true
     },
     plugins: [new webpack.HotModuleReplacementPlugin(), HTMLWebpackPluginConfig]
 };
