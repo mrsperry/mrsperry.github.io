@@ -39,30 +39,6 @@
     }
 }
 
-@media only screen and (max-width: 2560px) {
-    .visuals {
-        .carousel-root .carousel.carousel-slider .control-arrow {
-            padding: 2rem;
-        }
-
-        .project figure img {
-            width: 500px;
-        }
-    }
-}
-
-@media only screen and (max-width: 1440px) {
-    .visuals {
-        .carousel-root .carousel.carousel-slider .control-arrow {
-            padding: 1rem;
-        }
-        
-        .project figure img {
-            width: 325px;
-        }
-    }
-}
-
 @media only screen and (max-width: 1024px) {
     .visuals {
         .carousel {
