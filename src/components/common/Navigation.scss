@@ -26,3 +26,21 @@
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .navigation li + li {
+        padding-left: 1rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .navigation {
+        ul {
+            justify-content: center;
+        }
+        
+        li + li {
+            padding-left: 1rem;
+        }
+    }
+}

@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1024px) {
+    .portfolio img {
+        max-width: 150px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .portfolio img {
+        max-width: 190px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .portfolio img {
+        max-width: 280px;
+    }
+}

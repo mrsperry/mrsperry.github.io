@@ -3,6 +3,7 @@ import ProjectDisplay from "../common/ProjectDisplay";
 import GameData from "../../assets/data/games.json";
 import Navigation from "../common/Navigation";
 import { fadeInElements } from "../utils";
+import "./Games.scss";
 
 export default class Games extends React.PureComponent {
     public componentDidMount(): void {

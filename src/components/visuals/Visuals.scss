@@ -38,3 +38,61 @@
         }
     }
 }
+
+@media only screen and (max-width: 2560px) {
+    .visuals {
+        .carousel-root .carousel.carousel-slider .control-arrow {
+            padding: 2rem;
+        }
+
+        .project figure img {
+            width: 500px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .visuals {
+        .carousel-root .carousel.carousel-slider .control-arrow {
+            padding: 1rem;
+        }
+        
+        .project figure img {
+            width: 325px;
+        }
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .visuals {
+        .carousel {
+            margin-bottom: 1rem;
+        }
+
+        .project {
+            box-shadow: none;
+            margin: 0.25rem;
+
+            figure img {
+                width: 150px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .visuals .project {
+        box-shadow: none;
+        margin: 0.25rem;
+
+        figure img {
+            width: 180px;
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .visuals .project figure img {
+        width: 290px;
+    }
+}

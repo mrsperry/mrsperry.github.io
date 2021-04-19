@@ -4,12 +4,9 @@
 
 .profile {
     @include flex(column);
+    text-align: center;
     width: 100vw;
     height: 100vh;
-
-    div {
-        @include flex(column);
-    }
 
     img {
         @include anim-blow-up(1000ms);
@@ -45,6 +42,38 @@
 
         + a {
             margin-left: 4rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 2560px) {
+    .profile {
+        img {
+            width: 25rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+    .profile {
+        img {
+            width: 20rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .profile {
+        h1 {
+            font-size: 1.75rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        .portfolio-link {
+            padding: 1rem 2rem;
         }
     }
 }

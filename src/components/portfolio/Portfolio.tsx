@@ -3,6 +3,7 @@ import ProjectDisplay from "../common/ProjectDisplay";
 import PortfolioData from "../../assets/data/projects.json";
 import Navigation from "../common/Navigation";
 import { fadeInElements } from "../utils";
+import "./Portfolio.scss";
 
 export default class Portfolio extends React.Component {
     public componentDidMount(): void {

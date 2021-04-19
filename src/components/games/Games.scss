@@ -1,0 +1,17 @@
+@media only screen and (max-width: 1024px) {
+    .games img {
+        max-width: 225px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .games img {
+        max-width: 190px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .games img {
+        max-width: 280px;
+    }
+}
