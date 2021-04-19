@@ -5,11 +5,10 @@ import Navigation from "../common/Navigation";
 import { fadeInElements } from "../utils";
 import "./Portfolio.scss";
 
-export default class Portfolio extends React.Component {
+export default class Portfolio extends React.PureComponent {
     public componentDidMount(): void {
         fadeInElements(document.getElementsByClassName("project"), 100);
     }
-
 
     public render(): React.ReactNode {
         return <>

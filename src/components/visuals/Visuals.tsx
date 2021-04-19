@@ -13,7 +13,6 @@ export default class Visuals extends React.PureComponent {
         fadeInElements(document.getElementsByClassName("project"), 100);
     }
 
-
     public render(): React.ReactNode {
         // Carousel settings
         const settings: {} = {
