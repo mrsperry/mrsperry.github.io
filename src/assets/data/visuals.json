@@ -60,6 +60,10 @@
         {
             "name": "Meteor Shower",
             "alt": "Small lines of light coming from the center of the screen to create a meteor shower effect"
+        },
+        {
+            "name": "Rainbow Arcs",
+            "alt": "Rainbow colored arcs orbit around the center of the screen creating optical illusions"
         }
     ]
 }
